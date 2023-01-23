@@ -42,6 +42,7 @@ session_start();
             "</tr>",
             "</thead>",
             "<tbody>";
+
         $totalGeneral = 0;
 
         foreach ($_SESSION["products"] as $index => $product) {
@@ -49,7 +50,7 @@ session_start();
                 "<td>" . $index . "</td>",
                 "<td>" . $product["name"] . "</td>",
                 "<td>" . number_format($product["price"], 2, ",") . " €</td>",
-                "<td>" . $product["qtt"] . "</td>",
+                "<td><a class='test' href='traitement.php?action=lowerQtt&id=$index'> - </a>" . $product["qtt"] . "<a class='test2' href='traitement.php?action=" . $index . "'> + </a>" . "<a href='traitement.php?action=" . $index . "'></a></td>",
                 "<td>" . number_format($product["total"], 2, ",") . " €</td>",
                 "</tr>";
             $totalGeneral += $product["total"];
@@ -63,9 +64,7 @@ session_start();
     }
    
     ?>
-    <p class="panier">
-                <input class="button-input" type="submit" name="submit" value="Supprimer le panier">
-            </p>
+    <a href="traitement.php?action=deleteAll">Supprimer le panier</a>
 
 
 
