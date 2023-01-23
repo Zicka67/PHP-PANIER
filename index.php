@@ -36,7 +36,7 @@
 
     <div class="container">
         <h1>Ajouter un produit</h1>
-        <form action="traitement.php" method="post">
+        <form action="traitement.php?action=addProduct" method="post">
             <!-- action => indique la cible du formulaire, le fichier a atteindre quand le user soumet le form -->
             <p> <!-- method => précise la méthode HTTP de transmission au serveur, des données du form -->
                 <label>
