@@ -31,7 +31,7 @@ session_start();
     if (!isset($_SESSION["products"]) || empty($_SESSION["products"])) { // soit cette clé existe mais est vide : empty()
        
         echo "<p> Aucun produit en session ... </p>";
-        unset($_SESSION['message']);
+        // unset($_SESSION['message']);
     } else {
         echo "<table>",
             "<thead>",
