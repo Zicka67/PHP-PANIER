@@ -56,9 +56,11 @@
                     <input class="margin3" type="number" name="qtt" value="">
                 </label>
             </p>
-            <p class="button">
+            
+            <a class="button" href="http://localhost/PHP-PANIER/recap.php">
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
-            </p>
+            </a>
+            
         </form>
 
     </div>
