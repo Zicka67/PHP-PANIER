@@ -12,6 +12,13 @@ font-family: 'Lato', sans-serif;
 color: rgb(122, 122, 122);
 }
 
+p {
+    font-style: 20px;
+    color: rgb(73, 73, 73);
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
 .container h1 {
     text-align: center;
     font-style: 25px;
@@ -24,14 +31,24 @@ label {
     font-weight: bold;
 }
 
+span {
+    color: orange;
+    margin-left: 15px;
+}
+
 .button {
-    padding-top: 5px;
     text-align: center;
+    display: flex;
+    justify-content: center;
     width: 120px;
-    height: 25px;
+    height: 50px;
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
 
+.button:hover {
+    cursor: pointer;
 }
 
 .button-input {
@@ -57,10 +74,31 @@ label {
     color: rgb(122, 122, 122);
     color: orange;
     transition: 0.5s;
-    
+    text-decoration: none;
+   margin: 0 auto;
 }
 
-.button-input:hover {
+.panier-input2 {
+    background-color: rgb(73, 73, 73);
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(122, 122, 122);
+    color: orange;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.panier-input:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: rgb(73, 73, 73);
+    transition: 0.5s;
+}
+
+.panier-input2:hover {
     cursor: pointer;
     background-color: orange;
     color: rgb(73, 73, 73);
@@ -98,7 +136,7 @@ table {
     border-collapse: collapse;
     font-family: 'Lato', sans-serif;
     color: rgb(73, 73, 73);
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 th, td {
