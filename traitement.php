@@ -22,38 +22,49 @@ switch($_GET["action"]) {
                 ];
                 $_SESSION["products"][] = $product;//[] est un raccourci pour indiquer que nous ajoutons une nouvelle 
                 //entrée au futur tab "products" associé a cette clé.
+                $_SESSION['message'] = "Le produit " . $product['name'] . " a bien été ajouté au panier</p>";
+
             }
 
-            header("Location: index.php");
+            header("Location: recap.php"); //Redirige vers recap.php
         }
     break;
 
     // Decrease Quantity product
     case "lowerQtt":
-
-        header("Location: recap.php");
+        if($_SESSION['products'][$_GET['id']]['qtt'] >= 1){
+		$_SESSION['products'][$_GET['id']]['qtt']--;
+    }else{
+        unset($_SESSION['products'][$_GET['id']]);
+    }
+        header("Location: recap.php"); //Redirige vers recap.php
         die;
     break;
 
     // Increase Quantity product
     case "addQtt":
+		$_SESSION['products'][$_GET['id']]['qtt']++;
+        header("Location: recap.php"); //Redirige vers recap.php
+        die;
+    break;
 
-        header("Location: recap.php");
+
+    // Delet panier
+    case "deletePanier":
+        unset($_SESSION["products"][$_GET['id']]); //unset($_SESSION['products'][$_GET['index']]['total']);
+        header("Location: recap.php"); //Redirige vers recap.php
         die;
     break;
 
     // Delete all Qtt product
     case "deleteAll":
-        unset($_SESSION["products"]);
-        header("Location: recap.php");
+        unset($_SESSION['products'][$_GET['id']]); // $_get va prendre comme paramètre ici id qu'on va mettre ligne 55 dans le recap
+        $_SESSION['message'] = "<p>Le produit " . $product['name'] . " a bien été supprimé</p>";
+        header("Location: recap.php"); //Redirige vers recap.php
         die;
     break;
 
-    case "deleteProduct":
 
-        header("Location: recap.php");
-        die;
-    break;
 }
 
 
