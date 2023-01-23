@@ -11,11 +11,20 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
+
     <title>Recap des produits</title>
 
 </head>
 
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="recap.php">Récapitulatif</a></li>
+        </ul>
+    </nav>
 
     <?php
     // Soit clé "produits" du tab de session n'existe pas : !isset()
@@ -45,14 +54,18 @@ session_start();
                 "</tr>";
             $totalGeneral += $product["total"];
         }
-        echo  "<tr>",
-                "<td colspan=4>Total général : </td>",
-                "<td><strong>" . number_format($totalGeneral, 2, ",") . " €</strong></td>",
-                "<tr>",
-                "</tbody>",
-                "</table>";
+        echo "<tr>",
+            "<td colspan=4>Total général : </td>",
+            "<td><strong>" . number_format($totalGeneral, 2, ",") . " €</strong></td>",
+            "<tr>",
+            "</tbody>",
+            "</table>";
     }
+   
     ?>
+    <p class="panier">
+                <input class="button-input" type="submit" name="submit" value="Supprimer le panier">
+            </p>
 
 
 
