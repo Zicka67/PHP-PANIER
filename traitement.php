@@ -32,8 +32,9 @@ switch($_GET["action"]) {
 
     // Decrease Quantity product
     case "lowerQtt":
-        if($_SESSION['products'][$_GET['id']]['qtt'] >= 1){
+        if($_SESSION['products'][$_GET['id']]['qtt'] > 1){
 		$_SESSION['products'][$_GET['id']]['qtt']--;
+        $_SESSION['products'][$_GET['id']]['total'] -= $_SESSION['products'][$_GET['id']]['price'];
     }else{
         unset($_SESSION['products'][$_GET['id']]);
     }
@@ -44,6 +45,7 @@ switch($_GET["action"]) {
     // Increase Quantity product
     case "addQtt":
 		$_SESSION['products'][$_GET['id']]['qtt']++;
+        $_SESSION['products'][$_GET['id']]['total'] += $_SESSION['products'][$_GET['id']]['price'];
         header("Location: recap.php"); //Redirige vers recap.php
         die;
     break;
@@ -51,7 +53,7 @@ switch($_GET["action"]) {
 
     // Delet panier
     case "deletePanier":
-        unset($_SESSION["products"][$_GET['id']]); //unset($_SESSION['products'][$_GET['index']]['total']);
+        unset($_SESSION["products"]); //unset($_SESSION['products'][$_GET['index']]['total']);
         header("Location: recap.php"); //Redirige vers recap.php
         die;
     break;
