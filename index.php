@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -17,8 +15,17 @@
 
 <body>
 
+    <?php spl_autoload_register(function ($class_name) {
+
+        require_once $class_name . '.php';
+    });
+
+    ?>
+
+
     <h1>Ajouter un produit</h1>
-    <form action="traitement.php" method="get"> <!-- action => indique la cible du formulaire, le fichier a atteindre quand le user soumet le form -->
+    <form action="traitement.php" method="post">
+        <!-- action => indique la cible du formulaire, le fichier a atteindre quand le user soumet le form -->
         <p> <!-- method => précise la méthode HTTP de transmission au serveur, des données du form -->
             <label>
                 Nom du produit :
