@@ -29,7 +29,9 @@ session_start();
     <?php
     // Soit clé "produits" du tab de session n'existe pas : !isset()
     if (!isset($_SESSION["products"]) || empty($_SESSION["products"])) { // soit cette clé existe mais est vide : empty()
+       
         echo "<p> Aucun produit en session ... </p>";
+        unset($_SESSION['message']);
     } else {
         echo "<table>",
             "<thead>",
@@ -50,8 +52,9 @@ session_start();
                 "<td>" . $index . "</td>",
                 "<td>" . $product["name"] . "</td>",
                 "<td>" . number_format($product["price"], 2, ",") . " €</td>",
-                "<td><a class='test' href='traitement.php?action=lowerQtt&id=$index'> - </a>" . $product["qtt"] . "<a class='test2' href='traitement.php?action=" . $index . "'> + </a>" . "<a href='traitement.php?action=" . $index . "'></a></td>",
-                "<td>" . number_format($product["total"], 2, ",") . " €</td>",
+                //dans la ligne suivante id est lié a $_GET['id'] si $_GET['id'] serait $_GET['lol'], id ici serait lol
+                "<td><a class='test' href='traitement.php?action=lowerQtt&id=$index'> - </a>" . $product["qtt"] . "<a class='test2' href='traitement.php?action=addQtt&id=$index'> + </a>" . "<a href='traitement.php?action=" . $index . "'></a></td>",
+                "<td>" . number_format($product["total"], 2, ",") . " € </a>" . "<a href='traitement.php?action=deletePanier&id=" . $index . "'>  <span> Delete </span> </a></td>",
                 "</tr>";
             $totalGeneral += $product["total"];
         }
@@ -64,7 +67,7 @@ session_start();
     }
    
     ?>
-    <a href="traitement.php?action=deleteAll">Supprimer le panier</a>
+    <a class="panier-input2" href="traitement.php?action=deletePanier">Supprimer le panier</a>
 
 
 
