@@ -53,14 +53,14 @@ switch($_GET["action"]) {
 
     // Delet panier
     case "deletePanier":
-        unset($_SESSION["products"]); //unset($_SESSION['products'][$_GET['index']]['total']);
+        unset($_SESSION['products'][$_GET['id']]); //unset($_SESSION['products'][$_GET['index']]['total']);
         header("Location: recap.php"); //Redirige vers recap.php
         die;
     break;
 
     // Delete all Qtt product
     case "deleteAll":
-        unset($_SESSION['products'][$_GET['id']]); // $_get va prendre comme paramètre ici id qu'on va mettre ligne 55 dans le recap
+        unset($_SESSION["products"]); // $_get va prendre comme paramètre ici id qu'on va mettre ligne 55 dans le recap
         $_SESSION['message'] = "<p>Le produit " . $product['name'] . " a bien été supprimé</p>";
         header("Location: recap.php"); //Redirige vers recap.php
         die;
