@@ -51,23 +51,23 @@ session_start();
             echo "<tr>",
                 "<td>" . $index . "</td>",
                 "<td>" . $product["name"] . "</td>",
-                "<td>" . number_format($product["price"], 2, ",") . " €</td>",
+                "<td>" . number_format($product["price"], 2, ",", "") . " €</td>",
                 //dans la ligne suivante id est lié a $_GET['id'] si $_GET['id'] serait $_GET['lol'], id ici serait lol
                 "<td><a class='test' href='traitement.php?action=lowerQtt&id=$index'> - </a>" . $product["qtt"] . "<a class='test2' href='traitement.php?action=addQtt&id=$index'> + </a>" . "<a href='traitement.php?action=" . $index . "'></a></td>",
-                "<td>" . number_format($product["total"], 2, ",") . " € </a>" . "<a href='traitement.php?action=deletePanier&id=" . $index . "'>  <span> Delete </span> </a></td>",
+                "<td>" . number_format($product["total"], 2, ",", "") . " € </a>" . "<a href='traitement.php?action=deletePanier&id=" . $index . "'>  <span> Delete </span> </a></td>",
                 "</tr>";
             $totalGeneral += $product["total"];
         }
         echo "<tr>",
             "<td colspan=4>Total général : </td>",
-            "<td><strong>" . number_format($totalGeneral, 2, ",") . " €</strong></td>",
+            "<td><strong>" . number_format($totalGeneral, 2, "," , "") . " €</strong></td>",
             "<tr>",
             "</tbody>",
             "</table>";
     }
    
     ?>
-    <a class="panier-input2" href="traitement.php?action=deletePanier">Supprimer le panier</a>
+    <a class="panier-input2" href="traitement.php?action=deleteAll">Supprimer le panier</a>
 
 
 
