@@ -88,7 +88,7 @@ session_start();
     <div class="fruits-container">
         <div class="fruits">
             <h1>Pommes</h1>
-            <img src="" alt="">
+            <img src="img\shutterstock_575378506 (1).jpg" alt="">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
             <a class="button" href="http://localhost/PHP-PANIER/index.php">
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
@@ -97,7 +97,7 @@ session_start();
         
         <div class="fruits">
             <h1>Bananes</h1>
-            <img src="" alt="">
+            <img src="img\iStock_000007671231Large-e1565725651658-700x700.jpg" alt="">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
             <a class="button" href="http://localhost/PHP-PANIER/index.php">
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
@@ -106,7 +106,7 @@ session_start();
 
         <div class="fruits">
             <h1>Cerises</h1>
-            <img src="" alt="">
+            <img src="img\téléchargement.jpg" alt="">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
             <a class="button" href="http://localhost/PHP-PANIER/index.php">
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
@@ -115,7 +115,7 @@ session_start();
 
         <div class="fruits">
             <h1>Oranges</h1>
-            <img src="" alt="">
+            <img src="img\téléchargement (1).jpg" alt="">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
             <a class="button" href="http://localhost/PHP-PANIER/index.php">
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
