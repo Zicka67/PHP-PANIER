@@ -1,6 +1,30 @@
 <?php
 session_start();
 
+// if(isset($_POST["action"]) && $_POST["action"] == "addProduct") {
+//     $product = array(
+//         "name" => $_POST["name"],
+//         "price" => $_POST["price"],
+//         "qtt" => $_POST["qtt"]
+//     );
+
+//     if(!isset($_SESSION["products"])) {
+//         $_SESSION["products"] = array();
+//     }
+
+//     array_push($_SESSION["products"], $product);
+
+//     if(!isset($_SESSION["total"])) {
+//         $_SESSION["total"] = 0;
+//     }
+
+//     $_SESSION["total"] += ($_POST["price"] * $_POST["qtt"]);
+// }
+
+// redirect to recap page
+// header("Location: recap.php");
+
+
 switch($_GET["action"]) {
 
     case "addProduct" :
@@ -22,11 +46,11 @@ switch($_GET["action"]) {
                 ];
                 $_SESSION["products"][] = $product;//[] est un raccourci pour indiquer que nous ajoutons une nouvelle 
                 //entrée au futur tab "products" associé a cette clé.
-                $_SESSION['message'] = "Le produit " . $product['name'] . " a bien été ajouté au panier</p>";
+                // $_SESSION['message'] = "Le produit " . $product['name'] . " a bien été ajouté au panier</p>";
 
             }
 
-            header("Location: recap.php"); //Redirige vers recap.php
+            header("Location: index.php"); //Redirige vers recap.php
         }
     break;
 
