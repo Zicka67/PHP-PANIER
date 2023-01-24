@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -20,29 +24,30 @@
 
 <body>
 
-    <?php spl_autoload_register(function ($class_name) {
+     <!-- <?php spl_autoload_register(function ($class_name) {
 
         require_once $class_name . '.php';
     });
 
-    ?>
+    ?>  -->
 
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="recap.php">Récapitulatif</a></li>
-<!-- 
-            <div>
+            <img src="img\panier.png" alt="">
+            <div class="centrer">
             <?php
+            
                 if(isset($_SESSION["products"])) {
                   $panier_count = count($_SESSION["products"]);
-                  var_dump($panier_count);
-                  echo "Panier: ".$panier_count;
+                  
+                  echo "&nbsp Articles : ".$panier_count;
                 } else {
-                  echo "Panier: 0";
+                  echo "&nbsp Article : 0";
                 }
             ?>
-            </div> -->
+            </div> 
         </ul>
     </nav>
 
@@ -79,6 +84,46 @@
         </form>
 
     </div>
+
+    <div class="fruits-container">
+        <div class="fruits">
+            <h1>Pommes</h1>
+            <img src="" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
+            <a class="button" href="http://localhost/PHP-PANIER/index.php">
+                <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+            </a>
+        </div>
+        
+        <div class="fruits">
+            <h1>Bananes</h1>
+            <img src="" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
+            <a class="button" href="http://localhost/PHP-PANIER/index.php">
+                <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+            </a>
+        </div>
+
+        <div class="fruits">
+            <h1>Cerises</h1>
+            <img src="" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
+            <a class="button" href="http://localhost/PHP-PANIER/index.php">
+                <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+            </a>
+        </div>
+
+        <div class="fruits">
+            <h1>Oranges</h1>
+            <img src="" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
+            <a class="button" href="http://localhost/PHP-PANIER/index.php">
+                <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+            </a>
+        </div>
+    </div>
+
+
 
 </body>
 
