@@ -1,19 +1,41 @@
-
-
 .container {
-margin-left: auto;
-margin-right: auto;
-margin-top: 50px;
-margin-bottom: 150px;
-width: 350px;
-height: 280px;
-background-color: rgb(233, 233, 233);
-padding-top: 5px;
-padding-bottom: 30px;
-border-radius: 10px;
-font-family: 'Lato', sans-serif;
-color: rgb(122, 122, 122);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    width: 450px;
+    height: 380px;
+    background-color: rgb(233, 233, 233);
+    padding-top: 5px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(122, 122, 122);
 }
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    width: 350px;
+    height: 500px;
+    background-color: rgb(233, 233, 233);
+    padding-top: 5px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(122, 122, 122);
+}
+
+.fruits-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 p {
     font-style: 20px;
@@ -27,7 +49,7 @@ p {
     font-style: 25px;
     color: rgb(73, 73, 73);
     width: auto;
-} 
+}
 
 label {
     margin-left: 15px;
@@ -65,7 +87,7 @@ span {
     color: rgb(122, 122, 122);
     color: orange;
     transition: 0.5s;
-    
+
 }
 
 .panier-input {
@@ -79,7 +101,7 @@ span {
     color: orange;
     transition: 0.5s;
     text-decoration: none;
-   margin: 0 auto;
+    margin: 0 auto;
 }
 
 .panier-input2 {
@@ -127,8 +149,8 @@ span {
 }
 
 input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button { 
-	-webkit-appearance: none;
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 
@@ -143,7 +165,8 @@ table {
     margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
     border: 1px solid rgb(233, 233, 233);
     padding: 8px;
     text-align: center;
@@ -202,7 +225,7 @@ nav ul {
 
 nav ul li {
     margin-right: 15px;
-    
+
 }
 
 nav ul li a {
@@ -217,6 +240,7 @@ nav ul li a:hover {
     color: orange;
     transition: 0.5s;
 }
+
 nav img {
     position: absolute;
     right: 100px;
@@ -241,9 +265,10 @@ nav img {
 .fruits-container img {
     width: 250px;
     height: 200px;
-    margin-left: 75px;
+    margin-left: 0 auto;
     border-radius: 10px;
     transition: 0.5s;
+    margin-bottom: 50px;
 }
 
 .fruits-container img:hover {
@@ -267,10 +292,31 @@ nav img {
 
 .fruits {
     width: 400px;
-    height: 600px;
+    height: 400px;
     background-color: rgb(233, 233, 233);
     border-radius: 10px;
     margin-top: -100px;
     margin-bottom: 30px;
     filter: blur();
+}
+
+.style-fruits {
+    margin-bottom: 20px;
+}
+
+.style-fruits input {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    margin: 0 auto;
+}
+
+.style-fruits label {
+    width: 200px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
 }
