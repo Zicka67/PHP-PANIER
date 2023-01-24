@@ -24,12 +24,12 @@ session_start();
 
 <body>
 
-     <!-- <?php spl_autoload_register(function ($class_name) {
+    <!-- <?php spl_autoload_register(function ($class_name) {
 
-        require_once $class_name . '.php';
-    });
+                require_once $class_name . '.php';
+            });
 
-    ?>  -->
+            ?>  -->
 
     <nav>
         <ul>
@@ -37,22 +37,22 @@ session_start();
             <li><a href="recap.php">Récapitulatif</a></li>
             <img src="img\panier.png" alt="">
             <div class="centrer">
-            <?php
-            
-                if(isset($_SESSION["products"])) {
-                  $panier_count = count($_SESSION["products"]);
-                  
-                  echo "&nbsp Articles : ".$panier_count;
+                <?php
+
+                if (isset($_SESSION["products"])) {
+                    $panier_count = count($_SESSION["products"]);
+
+                    echo "&nbsp Articles : " . $panier_count;
                 } else {
-                  echo "&nbsp Article : 0";
+                    echo "&nbsp Article : 0";
                 }
-            ?>
-            </div> 
+                ?>
+            </div>
         </ul>
     </nav>
 
-  
-</div>
+
+    </div>
 
     <div class="container">
         <h1>Ajouter un produit</h1>
@@ -76,24 +76,123 @@ session_start();
                     <input class="margin3" type="number" name="qtt" value="">
                 </label>
             </p>
-            
-            <a class="button" href="http://localhost/PHP-PANIER/recap.php">
+
+            <a class="button" href="">
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
             </a>
-            
+
         </form>
 
     </div>
 
-    <div class="fruits-container">
+    <div class="flex">
+        <div class="container2">
+            <div class="fruits-container">
+                <div>
+                    <h1>Pommes</h1>
+                    <img src="img\shutterstock_575378506 (1).jpg" alt="">
+                </div>
+
+                <form action="traitement.php?action=addProduct" method="post">
+                    <div class="style-fruits">
+                        <label>
+
+                            <label>
+                                Quantité désirée :
+                                <input class="margin3" type="number" name="qtt" value="">
+                            </label>
+                    </div>
+
+                    <a class="button" href="">
+                        <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="fruits-container">
+                <div>
+                    <h1>Oranges</h1>
+                    <img src="img\téléchargement (1).jpg" alt="">
+                </div>
+
+                <form action="traitement.php?action=addProduct" method="post">
+                    <div class="style-fruits">
+                        <label>
+
+                            <label>
+                                Quantité désirée :
+                                <input class="margin3" type="number" name="qtt" value="">
+                            </label>
+                    </div>
+
+                    <a class="button" href="">
+                        <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="fruits-container">
+                <div>
+                    <h1>Cerises</h1>
+                    <img src="img\téléchargement.jpg" alt="">
+                </div>
+
+                <form action="traitement.php?action=addProduct" method="post">
+                    <div class="style-fruits">
+                        <label>
+
+                            <label>
+                                Quantité désirée :
+                                <input class="margin3" type="number" name="qtt" value="">
+                            </label>
+                    </div>
+
+                    <a class="button" href="">
+                        <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="fruits-container">
+                <div>
+                    <h1>banane</h1>
+                    <img src="img\iStock_000007671231Large-e1565725651658-700x700.jpg" alt="">
+                </div>
+
+                <form action="traitement.php?action=addProduct" method="post">
+                    <div class="style-fruits">
+                        <label>
+
+                            <label>
+                                Quantité désirée :
+                                <input class="margin3" type="number" name="qtt" value="">
+                            </label>
+                    </div>
+
+                    <a class="button" href="">
+                        <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="fruits-container">
         <div class="fruits">
-            <h1>Pommes</h1>
+            <h1>Pommes</h1> 
             <img src="img\shutterstock_575378506 (1).jpg" alt="">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
-            <a class="button" href="http://localhost/PHP-PANIER/index.php">
+            <a class="button" href='traitement.php?action=addQtt&id=$recap'>
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
             </a>
         </div>
+        
         
         <div class="fruits">
             <h1>Bananes</h1>
@@ -105,6 +204,7 @@ session_start();
         </div>
 
         <div class="fruits">
+       
             <h1>Cerises</h1>
             <img src="img\téléchargement.jpg" alt="">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit repellendus laborum aliquam aliquid possimus, porro quaerat, reprehenderit velit, culpa iusto assumenda voluptates doloribus consequatur ab. Dolor deserunt ab optio?</p>
@@ -121,17 +221,10 @@ session_start();
                 <input class="panier-input" type="submit" name="submit" value="Ajouter le produit">
             </a>
         </div>
-    </div>
+    </div> -->
 
 
 
 </body>
 
 </html>
-
-
-
-
-
-
-
