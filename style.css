@@ -1,9 +1,12 @@
 
 
 .container {
-margin: 200px auto;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+margin-bottom: 150px;
 width: 350px;
-height: auto;
+height: 280px;
 background-color: rgb(233, 233, 233);
 padding-top: 5px;
 padding-bottom: 30px;
@@ -23,6 +26,7 @@ p {
     text-align: center;
     font-style: 25px;
     color: rgb(73, 73, 73);
+    width: auto;
 } 
 
 label {
@@ -212,4 +216,32 @@ nav ul li a {
 nav ul li a:hover {
     color: orange;
     transition: 0.5s;
+}
+nav img {
+    position: absolute;
+    right: 100px;
+}
+
+.centrer {
+    margin-top: 5px;
+    position: absolute;
+    right: 20px;
+}
+
+/* ***************************** FRUITS **************************** */
+
+.fruits-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fruits {
+    width: 400px;
+    height: 600px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    margin-top: -100px;
+    margin-bottom: 30px;
 }
