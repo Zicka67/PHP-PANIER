@@ -31,20 +31,21 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="recap.php">Récapitulatif</a></li>
-
+<!-- 
+            <div>
+            <?php
+                if(isset($_SESSION["products"])) {
+                  $panier_count = count($_SESSION["products"]);
+                  var_dump($panier_count);
+                  echo "Panier: ".$panier_count;
+                } else {
+                  echo "Panier: 0";
+                }
+            ?>
+            </div> -->
         </ul>
     </nav>
 
-    <!-- <div class="cart-count">
-  <?php
-    if(isset($_SESSION["products"])) {
-      $cart_count = count($_SESSION["products"]);
-      echo "Cart: ".$cart_count;
-    }
-    else {
-      echo "Cart: 0";
-    }
-  ?> -->
   
 </div>
 
@@ -82,3 +83,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
