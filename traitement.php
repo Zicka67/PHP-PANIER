@@ -47,7 +47,9 @@ switch($_GET["action"]) {
                 $_SESSION["products"][] = $product;//[] est un raccourci pour indiquer que nous ajoutons une nouvelle 
                 //entrée au futur tab "products" associé a cette clé.
                 // $_SESSION['message'] = "Le produit " . $product['name'] . " a bien été ajouté au panier</p>";
-
+                $_SESSION["message"] = "Le produit a été ajouté";
+            }else {
+                "Une erreur s'est produite";
             }
 
             header("Location: index.php"); //Redirige vers recap.php
