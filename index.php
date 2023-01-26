@@ -51,6 +51,12 @@ session_start();
         </ul>
     </nav>
 
+    <?php
+    $message = (isset($_SESSION['message'])) ? $_SESSION['message'] : null;
+                echo $message;
+                unset($_SESSION['message']);
+    ?>
+
 
     </div>
 
